@@ -1,104 +1,50 @@
-import React from 'react';
+import React, {useState} from 'react';
 
+import CatalogService from '../../services/catalogService'
 
 const Goods = () => {
+
+    const catalogService = new CatalogService();
+
+    const [data, updateData] = useState('');
+
+    const renderItem = (subtitle, descr, price, carImg) => {
+
+
+        return (
+            <div className="goods__wrapper">
+                <div className="goods__item">
+                    <div className="goods__img-1"/>
+                    <div className="goods__item-subtitle">{subtitle}</div>
+                    <hr/>
+                    <div className="goods__item-descr">{descr}</div>
+                    <div className="goods__item-price">{price} руб</div>
+                    <button className="button button__price">АРЕНДОВАТЬ</button>
+                </div>
+            </div>
+        );
+    }
+
+    const renderItems = () => {
+        let data;
+
+        catalogService.getCatalog().then(res => {
+            data = res;
+        });
+
+
+    };
+
+
     return (
         <section className="goods">
             <div className="container">
                 <h2 className="goods__title">ПРОКАТ АВТО</h2>
-                <div className="goods__wrapper">
-                    <div className="goods__item">
-                        <div className="goods__img-1"/>
-                        <div className="goods__item-subtitle">HYUNDAI GENESIS</div>
-                        <hr/>
-                        <div className="goods__item-descr">2016 | Автомат | 270км/ч |<br/>
-                            Пробег: 25 000 км | Расход: 9л/100
-                        </div>
-                        <div className="goods__item-price">8 000 руб</div>
-                        <button className="button button__price">АРЕНДОВАТЬ</button>
-                    </div>
-                    <div className="goods__item">
-                        <div className="goods__img-2"/>
-                        <div className="goods__item-subtitle">HYUNDAI GENESIS</div>
-                        <hr/>
-                        <div className="goods__item-descr">2016 | Автомат | 270км/ч |<br/>
-                            Пробег: 25 000 км | Расход: 9л/100
-                        </div>
-                        <div className="goods__item-price">8 000 руб</div>
-                        <button className="button button__price">АРЕНДОВАТЬ</button>
-                    </div>
-                    <div className="goods__item">
-                        <div className="goods__img-3"/>
-                        <div className="goods__item-subtitle">HYUNDAI GENESIS</div>
-                        <hr/>
-                        <div className="goods__item-descr">2016 | Автомат | 270км/ч |<br/>
-                            Пробег: 25 000 км | Расход: 9л/100
-                        </div>
-                        <div className="goods__item-price">8 000 руб</div>
-                        <button className="button button__price">АРЕНДОВАТЬ</button>
-                    </div>
-                    <div className="goods__item">
-                        <div className="goods__img-4"/>
-                        <div className="goods__item-subtitle">HYUNDAI GENESIS</div>
-                        <hr/>
-                        <div className="goods__item-descr">2016 | Автомат | 270км/ч |<br/>
-                            Пробег: 25 000 км | Расход: 9л/100
-                        </div>
-                        <div className="goods__item-price">8 000 руб</div>
-                        <button className="button button__price">АРЕНДОВАТЬ</button>
-                    </div>
-                    <div className="goods__item">
-                        <div className="goods__img-5"/>
-                        <div className="goods__item-subtitle">HYUNDAI GENESIS</div>
-                        <hr/>
-                        <div className="goods__item-descr">2016 | Автомат | 270км/ч |<br/>
-                            Пробег: 25 000 км | Расход: 9л/100
-                        </div>
-                        <div className="goods__item-price">8 000 руб</div>
-                        <button className="button button__price">АРЕНДОВАТЬ</button>
-                    </div>
-                    <div className="goods__item">
-                        <div className="goods__img-6"/>
-                        <div className="goods__item-subtitle">HYUNDAI GENESIS</div>
-                        <hr/>
-                        <div className="goods__item-descr">2016 | Автомат | 270км/ч |<br/>
-                            Пробег: 25 000 км | Расход: 9л/100
-                        </div>
-                        <div className="goods__item-price">8 000 руб</div>
-                        <button className="button button__price">АРЕНДОВАТЬ</button>
-                    </div>
-                    <div className="goods__item">
-                        <div className="goods__img-7"/>
-                        <div className="goods__item-subtitle">HYUNDAI GENESIS</div>
-                        <hr/>
-                        <div className="goods__item-descr">2016 | Автомат | 270км/ч |<br/>
-                            Пробег: 25 000 км | Расход: 9л/100
-                        </div>
-                        <div className="goods__item-price">8 000 руб</div>
-                        <button className="button button__price">АРЕНДОВАТЬ</button>
-                    </div>
-                    <div className="goods__item">
-                        <div className="goods__img-8"/>
-                        <div className="goods__item-subtitle">HYUNDAI GENESIS</div>
-                        <hr/>
-                        <div className="goods__item-descr">2016 | Автомат | 270км/ч |<br/>
-                            Пробег: 25 000 км | Расход: 9л/100
-                        </div>
-                        <div className="goods__item-price">8 000 руб</div>
-                        <button className="button button__price">АРЕНДОВАТЬ</button>
-                    </div>
-                    <div className="goods__item">
-                        <div className="goods__img-9"/>
-                        <div className="goods__item-subtitle">HYUNDAI GENESIS</div>
-                        <hr/>
-                        <div className="goods__item-descr">2016 | Автомат | 270км/ч |<br/>
-                            Пробег: 25 000 км | Расход: 9л/100
-                        </div>
-                        <div className="goods__item-price">8 000 руб</div>
-                        <button className="button button__price">АРЕНДОВАТЬ</button>
-                    </div>
-
-                </div>
+                {renderItem(
+                    "HYUNDAI GENESIS",
+                    "2016 | Автомат | 270км/ч | Пробег: 25 000 км | Расход: 9л/100",
+                    "8000",
+                    null)}
             </div>
 
             <div className="special">
