@@ -1,7 +1,9 @@
 import React from 'react';
 
-import MailIcon from '../../img/icons/contacts/mail.eps';
-import PhoneIcon from '../../img/icons/contacts/phone.svg';
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhoneAlt, faClock, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 
 const Header = () => {
@@ -12,14 +14,14 @@ const Header = () => {
                     <div className="header__wrapper">
                         <div className="header__links">
                             <a href="tel:78008888888" className="header__phone">
-                                <img src={PhoneIcon} alt=""/>
+                                <FontAwesomeIcon icon={faPhoneAlt}/>
                                 +7 (800) 888-88-88</a>
                             <a href="#" className="header__email">
-                                <img src={MailIcon} alt=""/>auto@mail.ru
+                                <FontAwesomeIcon icon={faEnvelope}/>auto@mail.ru
                             </a>
                         </div>
                         <div className="header__primetime">
-                            <img src={MailIcon} alt=""/>
+                            <FontAwesomeIcon icon={faClock}/>
                             Режим работы: с
                             09:00
                             до 21:00

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import PhoneIcon from '../../img/icons/contacts/phone.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhoneAlt, faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
     return (
@@ -8,11 +9,11 @@ const Footer = () => {
             <div className="container">
                 <h2 className="footer__title">КОНТАКТЫ</h2>
                 <div className="footer__block">
-                    <div className="footer__contacts"><img src={PhoneIcon} alt=""/>
+                    <div className="footer__contacts"> <FontAwesomeIcon icon={faPhoneAlt}/>
                         <div className="div">+ 7 (888) 888-88-88 <br/> auto@mail.ru</div>
                     </div>
-                    <div className="footer__contacts">Пн-Пт: с 09:00 до 21:00 <br/> Сб-Вс: выходной</div>
-                    <div className="footer__contacts">Росиия, Санкт-Петербург, <br/> пр-т Московский 99</div>
+                    <div className="footer__contacts"><FontAwesomeIcon icon={faClock}/>Пн-Пт: с 09:00 до 21:00 <br/> Сб-Вс: выходной</div>
+                    <div className="footer__contacts"><FontAwesomeIcon icon={faMapMarkerAlt}/>Росиия, Санкт-Петербург, <br/> пр-т Московский 99</div>
                 </div>
 
             </div>
