@@ -11,12 +11,12 @@ const renderScrollLink = (tag, value) => {
         <li className="nav__menu-item">
             <ScrollLink
                 className ="nav__menu-link"
-                activeClass="active"
+                activeClass="nav__menu-link_active"
                 to={tag}
                 spy={true}
                 hashSpy={true}
                 smooth={true}
-                offset={0}
+                offset={-30}
                 duration={500}
                 delay={50}>
                 {value}

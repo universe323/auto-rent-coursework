@@ -19,17 +19,38 @@
         padding-left: 0
         list-style-type: none
         &-link
+            position: relative
             color: #232323
             font-size: 16px
             text-align: center
             font-weight: 600
             text-transform: uppercase
             transition: 0.5s all
+            cursor: pointer
             &:hover
                 text-decoration: none
                 color: #346AE8
-            &:focus
+            &_active
                 color: #346AE8
+                &:after
+                    content: ''
+                    position: absolute
+                    display: inline-block
+                    background: #346AE8
+                    height: 2px
+                    width: 100%
+                    left: 50%
+                    bottom: -5px
+                    transform: translateX(-50%)
+                    transition: all .5s ease
+                    animation-name: header_underline
+                    animation-duration: 1s
+
+
+
+
+
+
 
         &-item
             margin-left: 20px

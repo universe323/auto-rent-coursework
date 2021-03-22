@@ -7,7 +7,7 @@ import ChoiceIcon4 from '../../img/icons/choice/choice_4.png'
 
 const Advantages = () => {
     return (
-        <section id="advantages" className="advantages">
+        <section  id="advantages" className="advantages">
             <div className="container">
                 <div className="advantages__wrapper">
                     <h2 className="advantages__title">ПОЧЕМУ ВЫБИРАЮТ НАС?</h2>
@@ -43,7 +43,7 @@ const Advantages = () => {
                             <div className="advantages__reasons-descr">У нас только новые и комфортные автомобили.</div>
                         </div>
                     </div>
-                    <div className="advantages__discount">
+                    <div  className="advantages__discount">
                         <h2 className="advantages__discount-title">СКИДКА 15% ДО КОНЦА МЕСЯЦА</h2>
                         <div className="advantages__discount-descr">
                             Успей оставить заявку до конца месяца и получи пирожок абсолютно бесплатно
@@ -56,7 +56,28 @@ const Advantages = () => {
                         </form>
                     </div>
                 </div>
+
             </div>
+            <section className="statistics">
+                <div className="statistics__bg">
+                    <div className="container">
+                        <div className="statistics__wrapper">
+                            <div className="statistics__item">
+                                <h2>150+</h2>
+                                <div className="statistics__descr">ДОВОЛЬНЫХ КЛИЕНТОВ</div>
+                            </div>
+                            <div className="statistics__item">
+                                <h2>5+</h2>
+                                <div className="statistics__descr">ЛЕТ НА РЫНКЕ ПРОКАТА</div>
+                            </div>
+                            <div className="statistics__item">
+                                <h2>45+</h2>
+                                <div className="statistics__descr">МАШИН В АВТОПАРКЕ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     );
 }

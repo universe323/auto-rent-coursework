@@ -22,7 +22,7 @@ function App() {
             <Header/>
             <Carousel/>
             <Advantages/>
-            <Statistics/>
+            {/*<Statistics/>*/}
             <Goods/>
             {/*<Questions/>*/}
             <FeedbackSlider/>

@@ -17,11 +17,11 @@ const UserArea_profile = () => {
                             <div className="u   serArea__main-name">
                                 <h2>Личные данные</h2>
                                 <p>Имя и фамилия</p>
-                                <input value="Иванов Иван Иванович" type="text"/>
+                                <input placeholder="Иванов Иван Иванович" type="text"/>
                             </div>
                             <div className="userArea__contacts">
-                                <p>Контактный телефон</p> <input value="8-800-555-35-35"  type="text"/>
-                                <p>Электронная почта</p> <input  value="luchePozvonit@ChemUkogo-toZani.mat" type="text"/>
+                                <p>Контактный телефон</p> <input placeholder="8-800-555-35-35"  type="text"/>
+                                <p>Электронная почта</p> <input  placeholder="luchePozvonit@ChemUkogo-toZani.mat" type="text"/>
                             </div>
                             <div className="userArea__main-data">
                                 <h2>Данные и оплата</h2>
@@ -31,7 +31,7 @@ const UserArea_profile = () => {
                                     <option>Наличным расчетом</option>
                                     <option>Онлайн-платеж</option>
                                 </select>
-                                <p>Адрес доставки</p> <input value="Куда-нибудь" type="text"/>
+                                <p>Адрес доставки</p> <input placeholder="Куда-нибудь" type="text"/>
                             </div>
                             <button className="button button__userArea">Сохранить изменения</button>
                         </div>
