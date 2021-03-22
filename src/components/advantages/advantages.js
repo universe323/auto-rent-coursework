@@ -7,7 +7,7 @@ import ChoiceIcon4 from '../../img/icons/choice/choice_4.png'
 
 const Advantages = () => {
     return (
-        <section className="advantages">
+        <section id="advantages" className="advantages">
             <div className="container">
                 <div className="advantages__wrapper">
                     <h2 className="advantages__title">ПОЧЕМУ ВЫБИРАЮТ НАС?</h2>
@@ -28,7 +28,7 @@ const Advantages = () => {
                         </div>
                         <div className="advantages__reasons-item">
                             <div className="advantages__reasons-round">
-                                <img src={ChoiceIcon3} alt="Безопасно"/>
+                                <img  src={ChoiceIcon3} alt="Безопасно"/>
                             </div>
                             <div className="advantages__reasons-subtitle">БЕЗОПАСНО</div>
                             <div className="advantages__reasons-descr">Все автомобили застрахованы и в отличном

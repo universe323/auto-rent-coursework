@@ -24,7 +24,7 @@ const Carousel = () => {
 
     return (
         <>
-            <div className="carousel">
+            <div id="main" className="carousel">
                 <div className="carousel__wrapper">
                     <div className="carousel__inner">
                         <Slider {...settings}>
