@@ -5,7 +5,7 @@ import { faPhoneAlt, faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer id="contacts" className="footer">
             <div className="container">
                 <h2 className="footer__title">КОНТАКТЫ</h2>
                 <div className="footer__block">
