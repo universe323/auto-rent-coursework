@@ -1,10 +1,29 @@
 import React from 'react';
+import {Link as ScrollLink} from 'react-scroll'
 
 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faPhoneAlt, faClock, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhoneAlt, faClock, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
+const renderScrollLink = (tag, value) => {
+    return (
+        <li className="nav__menu-item">
+            <ScrollLink
+                className ="nav__menu-link"
+                activeClass="active"
+                to={tag}
+                spy={true}
+                hashSpy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                delay={50}>
+                {value}
+            </ScrollLink>
+        </li>
+    );
+}
 
 const Header = () => {
     return (
@@ -36,13 +55,14 @@ const Header = () => {
             <nav className="nav">
                 <div className="container">
                     <ul className="nav__menu">
-                        <div className="nav__menu-logo"><a href=""><span>Auto-</span>Rent</a></div>
-                        <li className="nav__menu-item"><a href="#main" className="nav__menu-link active">Главная</a></li>
-                        <li className="nav__menu-item"><a href="#advantages" className="nav__menu-link active">преимущества</a></li>
-                        <li className="nav__menu-item"><a href="#rent" className="nav__menu-link active">Прокат Авто</a></li>
-                        <li className="nav__menu-item"><a href="#" className="nav__menu-link active">FAQ</a></li>
-                        <li className="nav__menu-item"><a href="#feed" className="nav__menu-link active">Отзывы</a></li>
-                        <li className="nav__menu-item"><a href="#contacts" className="nav__menu-link active">Контакты</a></li>
+                        <div className="nav__menu-logo">
+                            <a href=""><span>Auto-</span>Rent</a></div>
+                        {renderScrollLink("main", "Главная")}
+                        {renderScrollLink("advantages", "преимущества")}
+                        {renderScrollLink("rent", "Прокат Авто")}
+                        {renderScrollLink("faq", "FAQ")}
+                        {renderScrollLink("feed", "Отзывы")}
+                        {renderScrollLink("contacts", "Контакты")}
                     </ul>
                 </div>
                 <div className="nav__auth">
