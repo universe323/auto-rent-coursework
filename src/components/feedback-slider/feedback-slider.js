@@ -25,7 +25,7 @@ const FeedbackSlider = () => {
         };
 
     return (
-        <section className="feed">
+        <section id="feed" className="feed">
             <div className="container">
                 <h2 className="feed__title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
                 <div className="feed__wrapper">

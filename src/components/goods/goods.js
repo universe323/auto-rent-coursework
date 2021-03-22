@@ -37,7 +37,7 @@ const Goods = () => {
 
 
     return (
-        <section className="goods">
+        <section id="rent" className="goods">
             <div className="container">
                 <h2 className="goods__title">ПРОКАТ АВТО</h2>
                 {renderItem(
